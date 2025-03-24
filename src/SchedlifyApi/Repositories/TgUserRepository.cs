@@ -1,11 +1,9 @@
 using SchedlifyApi.Data;
 using SchedlifyApi.Models;
 
-namespace SchedlifyApi.Repositories;
-
 using Microsoft.EntityFrameworkCore;
-using SchedlifyApi.Data;
-using SchedlifyApi.Models;
+
+namespace SchedlifyApi.Repositories;
 
 public class TgUserRepository : ITgUserRepository
 {
@@ -26,12 +24,12 @@ public class TgUserRepository : ITgUserRepository
         return user;
     }
 
-    public async Task<TgUser> GetByIdAsync(long id)
+    public async Task<TgUser?> GetByIdAsync(long id)
     {
         return await _context.TgUsers.FindAsync(id);
     }
 
-    public async Task<TgUser> GetByUsernameAsync(string username)
+    public async Task<TgUser?> GetByUsernameAsync(string username)
     {
         return await _context.TgUsers
             .FirstOrDefaultAsync(u => u.Username == username);

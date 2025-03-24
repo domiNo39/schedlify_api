@@ -3,21 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-public class TgUser
+public class University
 {
     [Key]
-    public long Id { get; set; }
-    
-    [StringLength(32)]
-    public string? Username { get; set; }
-    
+    public int Id { get; set; }
+
     [Required]
     [StringLength(64)]
-    public string FirstName { get; set; }
-    
-    [StringLength(64)]
-    public string? LastName { get; set; }
+    public string Name { get; set; }
     
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
+
+    // Navigation properties
+    public ICollection<Department> Departments { get; set; }
 }
