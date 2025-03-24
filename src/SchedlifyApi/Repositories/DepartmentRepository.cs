@@ -62,12 +62,12 @@ public class DepartmentRepository : IDepartmentRepository
         return department;
     }
 
-    public async Task Delete(int universityId)
+    public async Task Delete(int departmentId)
     {
-        var university = await _context.Universities.FindAsync(universityId);
-        if (university != null)
+        var department = await _context.Departments.FindAsync(departmentId);
+        if (department != null)
         {
-            _context.Universities.Remove(university);
+            _context.Departments.Remove(department);
             await _context.SaveChangesAsync();
         }
     }
