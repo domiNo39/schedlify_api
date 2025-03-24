@@ -16,6 +16,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Register the repository
 builder.Services.AddScoped<ITgUserRepository, TgUserRepository>();
+builder.Services.AddScoped<IUniversityRepository, UniversityRepository>();
 
 var app = builder.Build();
 
@@ -24,7 +25,6 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    
 }
 
 app.UseHttpsRedirection();

@@ -1,16 +1,13 @@
-using SchedlifyApi.Attributes;
-using SchedlifyApi.DTOs;
-using SchedlifyApi.Models;
-using SchedlifyApi.Repositories;
 
 namespace SchedlifyApi.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
-using SchedlifyApi.DTOs;
-using SchedlifyApi.Models;
-using SchedlifyApi.Repositories;
-using SchedlifyApi.Middleware;
-using SchedlifyApi.Attributes;
+
+using Models;
+using Repositories;
+using Attributes;
+using DTO;
+
 
 [ApiController]
 [Route("/tgusers")]
