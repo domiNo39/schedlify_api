@@ -17,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Register the repository
 builder.Services.AddScoped<ITgUserRepository, TgUserRepository>();
 builder.Services.AddScoped<IUniversityRepository, UniversityRepository>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 
 var app = builder.Build();
 
