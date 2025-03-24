@@ -15,5 +15,7 @@ namespace SchedlifyApi.DTO
     {
         public long Id { get; set; }
         public DateTime CreatedAt { get; set; }
+        public int? GroupId { get; set; }
+        public bool Subscribed { get; set; }
     }
 }
