@@ -39,7 +39,7 @@ public class DepartmentsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<CreateDepartmentResponse>> CreateDepartment([FromBody] DepartmentBase request)
+    public async Task<ActionResult<DepartmentResponse>> CreateDepartment([FromBody] CreateDepartmentRequest request)
     {
         var university = await _universityRepository.GetById(request.UniversityId);
         if (university == null)
@@ -54,12 +54,12 @@ public class DepartmentsController : ControllerBase
         };
 
         var createdDepartment = await _repository.Create(department);
-        var response = new CreateDepartmentResponse
+        var response = new DepartmentResponse
         {
             Name = createdDepartment.Name,
             UniversityId = createdDepartment.UniversityId
         };
 
-        return CreatedAtAction(nameof(GetDepartments), new { universityId = response.UniversityId }, response);
+        return CreatedAtAction(nameof(GetDepartments), response);
     }
 }

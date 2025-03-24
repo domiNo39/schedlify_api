@@ -12,8 +12,8 @@ public class Group
     [Required]
     public int DepartmentId { get; set; }
 
-    [Required]
-    public int AdministratorId { get; set; }
+    // [Required]
+    // public int AdministratorId { get; set; }
 
     [Required]
     public string Name { get; set; }
@@ -22,8 +22,8 @@ public class Group
     [ForeignKey("DepartmentId")]
     public Department Department { get; set; }
 
-    [ForeignKey("AdministratorId")]
-    public User Administrator { get; set; }
+    // [ForeignKey("AdministratorId")]
+    // public User Administrator { get; set; }
     public ICollection<Assignment> Assignments { get; set; }
     public ICollection<Class> Classes { get; set; }
 }

@@ -6,7 +6,7 @@ public class DepartmentBase
     public int UniversityId { get; set; }
 }
 
-public class CreateDepartmentResponse : DepartmentBase
+public class CreateDepartmentRequest : DepartmentBase
 {
     
 }

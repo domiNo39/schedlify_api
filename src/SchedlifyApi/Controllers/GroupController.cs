@@ -1,0 +1,67 @@
+using System.Runtime.CompilerServices;
+
+namespace SchedlifyApi.Controllers;
+
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+using Models;
+using Repositories;
+using Attributes;
+using DTO;
+
+
+[ApiController]
+[Route("/groups")]
+public class GroupsController : ControllerBase
+{
+    private readonly IGroupRepository _repository;
+    private readonly IDepartmentRepository _departmentRepository;
+
+    public GroupsController(IGroupRepository repository, IDepartmentRepository departmentRepository)
+    {
+        _repository = repository;
+        _departmentRepository = departmentRepository;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<List<GroupResponse>>> GetGroups([FromQuery] int departmentId, [FromQuery] int offset = 0, [FromQuery] int limit = 10)
+    {
+        // offset and limit does not work
+        var departments = await _repository.GetAll(departmentId, offset, limit);
+        var response = departments.Select(d => new GroupResponse
+        {
+            Id = d.Id,
+            Name = d.Name,
+            DepartmentId = d.DepartmentId
+        }).ToList();
+
+        return Ok(response);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<GroupResponse>> CreateGroup([FromBody] CreateGroupRequest request)
+    {
+        var department = await _departmentRepository.GetById(request.DepartmentId);
+        if (department == null)
+        {
+            return BadRequest("Department does not exist.");
+        }
+
+        var group = new Group
+        {
+            Name = request.Name,
+            DepartmentId = request.DepartmentId
+        };
+
+        var createdGroup = await _repository.Create(group);
+        var response = new GroupResponse
+        {
+            Name = createdGroup.Name,
+            DepartmentId = createdGroup.DepartmentId
+        };
+
+        return CreatedAtAction(nameof(GetGroups), response);
+    }
+}

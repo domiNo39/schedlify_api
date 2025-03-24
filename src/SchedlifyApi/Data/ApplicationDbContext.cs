@@ -58,10 +58,10 @@ public class ApplicationDbContext : DbContext
                   .HasForeignKey(g => g.DepartmentId)
                   .OnDelete(DeleteBehavior.Restrict);
 
-            entity.HasOne(g => g.Administrator)
-                  .WithMany(u => u.AdministratedGroups)
-                  .HasForeignKey(g => g.AdministratorId)
-                  .OnDelete(DeleteBehavior.Restrict);
+            // entity.HasOne(g => g.Administrator)
+            //       .WithMany(u => u.AdministratedGroups)
+            //       .HasForeignKey(g => g.AdministratorId)
+            //       .OnDelete(DeleteBehavior.Restrict);
         });
 
         // TemplateSlot configuration
