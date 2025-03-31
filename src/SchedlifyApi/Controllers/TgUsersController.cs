@@ -93,15 +93,17 @@ public class TgUsersController : ControllerBase
 
         return response;
     }
-    [HttpPost("/select_group")]
-    public async Task<ActionResult<TgUserResponse>> SelectGroup([FromHeader(Name = "X-TG-UID")] long telegramUid, int GroupId)
+    [HttpPost("/tgusers/groups/{groupId:int}")]
+    public async Task<ActionResult<TgUserResponse>> SelectGroup(
+        [FromHeader(Name = "X-TG-UID")] long telegramUid,
+        int groupId)
     {
         var user = await _repository.GetByIdAsync(telegramUid);
         if (user == null)
         {
             return NotFound();
         }
-        user.GroupId = GroupId;
+        user.GroupId = groupId;
         await _repository.UpdateAsync(user);
         var response = new TgUserResponse
         {
