@@ -25,9 +25,16 @@ public class UniversityRepository : IUniversityRepository
             .ToListAsync();
     }
 
-    public async Task<List<University>> GetAll(int offset, int limit)
+    public async Task<List<University>> GetAll(string? s, int offset = 0, int limit = 10)
     {
-        return await _context.Universities
+        IQueryable<University> query = _context.Universities;
+
+        if (!string.IsNullOrEmpty(s))
+        {
+            query = query.Where(u => u.Name.Contains(s));
+        }
+
+        return await query
             .Skip(offset)
             .Take(limit)
             .ToListAsync();

@@ -11,18 +11,24 @@ public class Group
 
     [Required]
     public int DepartmentId { get; set; }
+    
+    public int AdministratorId { get; set; }
 
     [Required]
     public string Name { get; set; }
+    
+    
+    [ForeignKey("AdministratorId")]
+    public User Administrator { get; set; }
 
-    // Навігаційні властивості
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [ForeignKey("DepartmentId")]
     public Department Department { get; set; }
 
-    // Колекція для користувачів, які належать до цієї групи
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     public ICollection<TgUser> TgUsers { get; set; }
 
-    // Інші колекції
+    // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public ICollection<Assignment> Assignments { get; set; }
     public ICollection<Class> Classes { get; set; }
 }

@@ -26,10 +26,17 @@ public class DepartmentRepository : IDepartmentRepository
             .ToListAsync();
     }
 
-    public async Task<List<Department>> GetAll(int universityId, int offset, int limit)
+    public async Task<List<Department>> GetAll(
+        int universityId, string? s, int offset = 0, int limit = 10)
     {
-        return await _context.Departments
-            .Where(d => d.UniversityId == universityId)
+        IQueryable<Department> query = _context.Departments.Where(d => d.UniversityId == universityId);
+
+        if (!string.IsNullOrEmpty(s))
+        {
+            query = query.Where(u => u.Name.Contains(s));
+        }
+
+        return await query
             .Skip(offset)
             .Take(limit)
             .ToListAsync();

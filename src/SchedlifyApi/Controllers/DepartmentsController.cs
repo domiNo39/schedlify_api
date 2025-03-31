@@ -24,10 +24,15 @@ public class DepartmentsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<DepartmentResponse>>> GetDepartments([FromQuery] int universityId, [FromQuery] int offset = 0, [FromQuery] int limit = 10)
+    public async Task<ActionResult<List<DepartmentResponse>>> GetDepartments(
+        [FromQuery] int universityId,
+        [FromQuery] string? s,
+        [FromQuery] int offset = 0,
+        [FromQuery] int limit = 10
+        )
     {
         // offset and limit does not work
-        var departments = await _repository.GetAll(universityId, offset, limit);
+        var departments = await _repository.GetAll(universityId, s, offset, limit);
         var response = departments.Select(d => new DepartmentResponse
         {
             Id = d.Id,

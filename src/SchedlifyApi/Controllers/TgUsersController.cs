@@ -23,7 +23,10 @@ public class TgUsersController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<TgUserResponse>> CreateTgUser([FromHeader(Name = "X-TG-UID")] long telegramUid, CreateTgUserRequest request)
+    public async Task<ActionResult<TgUserResponse>> CreateTgUser(
+        [FromHeader(Name = "X-TG-UID")] long telegramUid,
+        CreateTgUserRequest request
+        )
     {
 
         // Check if user already exists by ID (Telegram UID)

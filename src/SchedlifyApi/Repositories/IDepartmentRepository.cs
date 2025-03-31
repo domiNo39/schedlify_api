@@ -8,7 +8,7 @@ namespace SchedlifyApi.Repositories;
 public interface IDepartmentRepository
 {
     Task<Department?> GetById(int departmentId);
-    Task<List<Department>> GetAll(int universityId, int offset, int limit);
+    Task<List<Department>> GetAll(int universityId, string? s, int offset, int limit);
     Task<List<Department>> GetAll(int universityId);
     Task<Department?> GetByName(string name);
     Task<List<Department>> GetByNamePart(string name);
