@@ -57,7 +57,7 @@ public class DepartmentsController : ControllerBase
         var response = new DepartmentResponse
         {
             Name = createdDepartment.Name,
-            UniversityId = createdDepartment.UniversityId
+            UniversityId = request.UniversityId //i hope this solution will work
         };
 
         return CreatedAtAction(nameof(GetDepartments), response);

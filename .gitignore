@@ -90,3 +90,12 @@ coverage/
 TestResults/
 *.coverage
 *.coveragexml
+
+# Ignore nonessential vs files
+*.json
+*.vsidx
+*.bin
+*.wsuo
+*.v2
+.vs/
+src/SchedlifyApi/appsettings.json

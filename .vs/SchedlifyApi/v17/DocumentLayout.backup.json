@@ -1,74 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\controllers\\tguserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\controllers\\tguserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\controllers\\universitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\controllers\\universitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\dto\\tgusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\dto\\tgusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\models\\tguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\models\\tguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\controllers\\templateslotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\controllers\\templateslotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\dto\\templateslotdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\dto\\templateslotdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\models\\templateslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\models\\templateslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\repositories\\itemplateslotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\repositories\\itemplateslotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\models\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\models\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\repositories\\templateslotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\repositories\\templateslotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\attributes\\requiretelegramuidattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\attributes\\requiretelegramuidattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\middleware\\telegramauthmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\middleware\\telegramauthmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\cherp\\source\\repos\\schedlify_api\\src\\schedlifyapi\\schedlifynew.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\schedlifynew.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\models\\templateslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\models\\templateslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\controllers\\universitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\controllers\\universitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|c:\\users\\\u0432\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\schedlifyapi\\schedlifyapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0B5FA176-92DD-4D64-B82A-BAE27C82F605}|src\\SchedlifyApi\\SchedlifyApi.csproj|solutionrelative:src\\schedlifyapi\\schedlifyapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,50 +54,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TgUsers.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\DTO\\TgUsers.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\DTO\\TgUsers.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\DTO\\TgUsers.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\DTO\\TgUsers.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:40:32.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Group.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\Group.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Models\\Group.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\Group.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Models\\Group.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA5wAEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:19:52.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DepartmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:01:21.411Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDsAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:00:09.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TemplateSlotsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\TemplateSlotsController.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Controllers\\TemplateSlotsController.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\TemplateSlotsController.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\Controllers\\TemplateSlotsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T22:02:47.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -129,181 +100,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Models\\Department.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\Department.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Models\\Department.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TemplateSlotDtos.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\DTO\\TemplateSlotDtos.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\DTO\\TemplateSlotDtos.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\DTO\\TemplateSlotDtos.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\DTO\\TemplateSlotDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:14:56.819Z",
+              "WhenOpened": "2025-03-31T22:37:35.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TgUser.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\TgUser.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Models\\TgUser.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\TgUser.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Models\\TgUser.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBIAAAAWAAAAAAAAAA==",
+              "Title": "ITemplateSlotRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Repositories\\ITemplateSlotRepository.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Repositories\\ITemplateSlotRepository.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Repositories\\ITemplateSlotRepository.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\Repositories\\ITemplateSlotRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:14:31.072Z",
+              "WhenOpened": "2025-03-31T22:34:09.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TgUsersController.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\TgUsersController.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Controllers\\TgUsersController.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\TgUsersController.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Controllers\\TgUsersController.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAIwHAAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "TemplateSlotRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Repositories\\TemplateSlotRepository.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Repositories\\TemplateSlotRepository.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Repositories\\TemplateSlotRepository.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\Repositories\\TemplateSlotRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:55:07.954Z",
+              "WhenOpened": "2025-03-31T22:32:36.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "TemplateSlot.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\TemplateSlot.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\TemplateSlot.cs",
               "RelativeDocumentMoniker": "src\\SchedlifyApi\\Models\\TemplateSlot.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\TemplateSlot.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\TemplateSlot.cs",
               "RelativeToolTip": "src\\SchedlifyApi\\Models\\TemplateSlot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:22:54.983Z",
+              "WhenOpened": "2025-03-31T22:27:04.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UniversitiesController.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\appsettings.json",
+              "RelativeToolTip": "src\\SchedlifyApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-24T17:36:49.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Program.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Program.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:56:24.804Z",
+              "WhenOpened": "2025-03-31T22:39:34.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Enums.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\Enums.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Models\\Enums.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Models\\Enums.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Models\\Enums.cs",
+              "Title": "UniversitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\Controllers\\UniversitiesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:31:54.971Z",
+              "WhenOpened": "2025-03-31T22:29:56.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "RequireTelegramUidAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Attributes\\RequireTelegramUidAttribute.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Attributes\\RequireTelegramUidAttribute.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Attributes\\RequireTelegramUidAttribute.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Attributes\\RequireTelegramUidAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:10:01.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TelegramAuthMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Middleware\\TelegramAuthMiddleware.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Middleware\\TelegramAuthMiddleware.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Middleware\\TelegramAuthMiddleware.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Middleware\\TelegramAuthMiddleware.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowC0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:55:29.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\SchedlifyApi\\Properties\\launchSettings.json",
+              "Title": "GroupController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\GroupController.cs",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Controllers\\GroupController.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Controllers\\GroupController.cs",
+              "RelativeToolTip": "src\\SchedlifyApi\\Controllers\\GroupController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T17:35:38.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:33:40.246Z",
+              "WhenOpened": "2025-03-31T22:04:18.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "DepartmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Repositories\\DepartmentRepository.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Repositories\\DepartmentRepository.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Repositories\\DepartmentRepository.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Repositories\\DepartmentRepository.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:23:13.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\appsettings.json",
-              "RelativeToolTip": "src\\SchedlifyApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T17:22:36.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "SchedlifyNew.http",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\SchedlifyNew.http",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\SchedlifyNew.http",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\SchedlifyNew.http",
-              "RelativeToolTip": "src\\SchedlifyApi\\SchedlifyNew.http",
+              "Title": "SchedlifyApi.csproj",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\SchedlifyApi.csproj",
+              "RelativeDocumentMoniker": "src\\SchedlifyApi\\SchedlifyApi.csproj",
+              "ToolTip": "C:\\Users\\\u0412\u0430\u0444\u043B\u044F\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\SchedlifyApi.csproj",
+              "RelativeToolTip": "src\\SchedlifyApi\\SchedlifyApi.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-03-24T17:22:23.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Program.cs",
-              "RelativeDocumentMoniker": "src\\SchedlifyApi\\Program.cs",
-              "ToolTip": "C:\\Users\\cherp\\source\\repos\\schedlify_api\\src\\SchedlifyApi\\Program.cs",
-              "RelativeToolTip": "src\\SchedlifyApi\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:19:59.908Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-24T17:41:23.638Z"
             }
           ]
         }
