@@ -8,7 +8,7 @@ namespace SchedlifyApi.Repositories;
 public interface IGroupRepository
 {
     Task<Group?> GetById(int groupId);
-    Task<List<Group>> GetAll(int departmentId, int offset, int limit);
+    Task<List<Group>> GetAll(int departmentId, string? s, int offset, int limit);
     Task<List<Group>> GetAll(int departmentId);
     Task<Group?> GetByName(string name);
     Task<List<Group>> GetByNamePart(string name);

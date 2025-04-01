@@ -22,9 +22,13 @@ public class UniversitiesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<UniversityResponse>>> GetUniversities([FromQuery] int offset = 0, [FromQuery] int limit = 10)
+    public async Task<ActionResult<List<UniversityResponse>>> GetUniversities(
+        [FromQuery] string? s = null,
+        [FromQuery] int offset = 0,
+        [FromQuery] int limit = 10
+        )
     {
-        var universities = await _repository.GetAll(offset, limit);
+        var universities = await _repository.GetAll(s, offset, limit);
         var response = universities.Select(u => new UniversityResponse
         {
             Id = u.Id,
@@ -33,7 +37,7 @@ public class UniversitiesController : ControllerBase
 
         return Ok(response);
     }
-    
+
     [HttpPost]
     public async Task<ActionResult<UniversityResponse>> CreateUniversity([FromBody] CreateUniversityRequest request)
     {

@@ -18,18 +18,29 @@ public class GroupsController : ControllerBase
 {
     private readonly IGroupRepository _repository;
     private readonly IDepartmentRepository _departmentRepository;
+    private readonly IUserRepository _userRepository;
 
-    public GroupsController(IGroupRepository repository, IDepartmentRepository departmentRepository)
+    public GroupsController(
+        IGroupRepository repository,
+        IDepartmentRepository departmentRepository,
+        IUserRepository userRepository)
     {
         _repository = repository;
         _departmentRepository = departmentRepository;
+        _userRepository = userRepository;
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<GroupResponse>>> GetGroups([FromQuery] int departmentId, [FromQuery] int offset = 0, [FromQuery] int limit = 10)
+    public async Task<ActionResult<List<GroupResponse>>> GetGroups(
+        [FromQuery] int departmentId,
+        [FromQuery] string? s = null,
+        [FromQuery] int offset = 0,
+        [FromQuery] int limit = 10
+    )
     {
         // offset and limit does not work
-        var departments = await _repository.GetAll(departmentId, offset, limit);
+        var departments = await _repository.GetAll(
+            departmentId, s, offset, limit);
         var response = departments.Select(d => new GroupResponse
         {
             Id = d.Id,
@@ -40,19 +51,45 @@ public class GroupsController : ControllerBase
         return Ok(response);
     }
 
+    [HttpGet("/groups/{groupId:int}")]
+    public async Task<ActionResult<GroupResponse>> GetGroupById(int groupId)
+    { // offset and limit does not work
+        var group = await _repository.GetById(groupId);
+        if (group == null)
+        {
+            return BadRequest("Group does not exist.");
+        }
+
+        var response = new GroupResponse
+        {
+            Name = group.Name,
+            DepartmentId = group.DepartmentId
+        };
+        return Ok(response);
+    }
+
     [HttpPost]
-    public async Task<ActionResult<GroupResponse>> CreateGroup([FromBody] CreateGroupRequest request)
+    public async Task<ActionResult<GroupResponse>> CreateGroup(
+        [FromBody] CreateGroupRequest request,
+        [FromHeader(Name = "X-CLIENT-UID")] int userId
+    )
     {
         var department = await _departmentRepository.GetById(request.DepartmentId);
         if (department == null)
         {
             return BadRequest("Department does not exist.");
         }
+        var administrator = await _userRepository.GetUserById(userId);
+        if (administrator == null)
+        {
+            return BadRequest("User does not exist.");
+        }
 
         var group = new Group
         {
             Name = request.Name,
-            DepartmentId = request.DepartmentId
+            DepartmentId = request.DepartmentId,
+            AdministratorId = userId
         };
 
         var createdGroup = await _repository.Create(group);

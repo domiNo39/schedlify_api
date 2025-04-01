@@ -7,6 +7,7 @@ using Models;
 using Repositories;
 using Attributes;
 using DTO;
+using System.Text.RegularExpressions;
 
 
 [ApiController]
@@ -22,7 +23,10 @@ public class TgUsersController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<TgUserResponse>> CreateTgUser(CreateTgUserRequest request, long telegramUid)
+    public async Task<ActionResult<TgUserResponse>> CreateTgUser(
+        [FromHeader(Name = "X-TG-UID")] long telegramUid,
+        CreateTgUserRequest request
+        )
     {
 
         // Check if user already exists by ID (Telegram UID)
@@ -58,14 +62,16 @@ public class TgUsersController : ControllerBase
             Username = createdUser.Username,
             FirstName = createdUser.FirstName,
             LastName = createdUser.LastName,
-            CreatedAt = createdUser.CreatedAt
+            CreatedAt = createdUser.CreatedAt,
+            GroupId = createdUser.GroupId,
+            Subscribed = createdUser.Subscribed,
         };
 
         return CreatedAtAction(nameof(GetTgUser), new { id = response.Id }, response);
     }
 
     [HttpGet]
-    public async Task<ActionResult<TgUserResponse>> GetTgUser(long telegramUid)
+    public async Task<ActionResult<TgUserResponse>> GetTgUser([FromHeader(Name = "X-TG-UID")] long telegramUid)
     {
 
         var user = await _repository.GetByIdAsync(telegramUid);
@@ -80,9 +86,57 @@ public class TgUsersController : ControllerBase
             Username = user.Username,
             FirstName = user.FirstName,
             LastName = user.LastName,
-            CreatedAt = user.CreatedAt
+            CreatedAt = user.CreatedAt,
+            GroupId = user.GroupId,
+            Subscribed = user.Subscribed,
         };
 
+        return response;
+    }
+    [HttpPost("/tgusers/groups/{groupId:int}")]
+    public async Task<ActionResult<TgUserResponse>> SelectGroup(
+        [FromHeader(Name = "X-TG-UID")] long telegramUid,
+        int groupId)
+    {
+        var user = await _repository.GetByIdAsync(telegramUid);
+        if (user == null)
+        {
+            return NotFound();
+        }
+        user.GroupId = groupId;
+        await _repository.UpdateAsync(user);
+        var response = new TgUserResponse
+        {
+            Id = user.Id,
+            Username = user.Username,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            CreatedAt = user.CreatedAt,
+            GroupId = user.GroupId,
+            Subscribed = user.Subscribed,
+        };
+        return response;
+    }
+    [HttpPost("/change_subscription_status")]
+    public async Task<ActionResult<TgUserResponse>> SelectGroup([FromHeader(Name = "X-TG-UID")] long telegramUid)
+    {
+        var user = await _repository.GetByIdAsync(telegramUid);
+        if (user == null)
+        {
+            return NotFound();
+        }
+        user.Subscribed = !user.Subscribed;
+        await _repository.UpdateAsync(user);
+        var response = new TgUserResponse
+        {
+            Id = user.Id,
+            Username = user.Username,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            CreatedAt = user.CreatedAt,
+            GroupId = user.GroupId,
+            Subscribed = user.Subscribed,
+        };
         return response;
     }
 }

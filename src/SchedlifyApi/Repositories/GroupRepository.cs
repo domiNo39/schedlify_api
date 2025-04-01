@@ -26,10 +26,16 @@ public class GroupRepository : IGroupRepository
             .ToListAsync();
     }
 
-    public async Task<List<Group>> GetAll(int departmentId, int offset, int limit)
+    public async Task<List<Group>> GetAll(
+        int departmentId, string? s, int offset=0, int limit=10)
     {
-        return await _context.Groups
-            .Where(d => d.DepartmentId == departmentId)
+        IQueryable<Group> query = _context.Groups.Where(d => d.DepartmentId == departmentId);
+        if (!string.IsNullOrEmpty(s))
+        {
+            query = query.Where(u => u.Name.Contains(s));
+        }
+
+        return await query
             .Skip(offset)
             .Take(limit)
             .ToListAsync();
