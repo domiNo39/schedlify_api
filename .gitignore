@@ -90,3 +90,5 @@ coverage/
 TestResults/
 *.coverage
 *.coveragexml
+*/**/appsettings.json
+*/**/appsettings.Development.json
