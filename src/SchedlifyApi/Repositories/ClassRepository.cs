@@ -17,7 +17,9 @@ public class ClassRepository: IClassRepository
 
     public async Task<Class?> GetByIdAsync(int id)
     {
-        return await _context.Classes.FindAsync(id);
+        return await _context.Classes
+            .Include(c => c.Group) // Include related Group entity
+            .FirstOrDefaultAsync(c => c.Id == id);
     }
     
     public async Task<List<Class>> GetByGroupId(int groupId)
