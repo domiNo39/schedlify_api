@@ -46,7 +46,8 @@ public class GroupsController : ControllerBase
         {
             Id = d.Id,
             Name = d.Name,
-            DepartmentId = d.DepartmentId
+            DepartmentId = d.DepartmentId,
+            AdministratorId = d.AdministratorId
         }).ToList();
 
         return Ok(response);
@@ -65,6 +66,8 @@ public class GroupsController : ControllerBase
         {
             Name = group.Name,
             DepartmentId = group.DepartmentId,
+            Id = group.Id,
+            AdministratorId = group.AdministratorId,
             Department = new DepartmentResponse
             {
                 Id = group.DepartmentId,
@@ -108,7 +111,8 @@ public class GroupsController : ControllerBase
         {
             Id = createdGroup.Id,
             Name = createdGroup.Name,
-            DepartmentId = createdGroup.DepartmentId
+            DepartmentId = createdGroup.DepartmentId,
+            AdministratorId = createdGroup.AdministratorId
         };
 
         return CreatedAtAction(nameof(GetGroups), response);

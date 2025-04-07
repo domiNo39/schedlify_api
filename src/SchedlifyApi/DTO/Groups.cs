@@ -11,6 +11,7 @@ public class GroupBase
 public class GroupResponse: GroupBase
 {
     public int Id { get; set; }
+    public int AdministratorId { get; set; }
 }
 
 public class GroupExtendedResponse : GroupResponse
