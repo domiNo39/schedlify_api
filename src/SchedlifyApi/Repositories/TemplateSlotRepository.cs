@@ -24,6 +24,14 @@ public class TemplateSlotRepository : ITemplateSlotRepository
             .ToListAsync();
     }
 
+    public async Task<TemplateSlot?> GetByDepartmentIdAndClassNumber(int departmentId, int classNumber)
+    {
+        return await _dbContext.TemplateSlots
+            .Include(d => d.Department)
+            .FirstOrDefaultAsync(d => d.DepartmentId == departmentId && d.ClassNumber == classNumber);
+
+    }
+
     public async Task CreateBulkAsync(int departmentId, List<TemplateSlot> templateSlots)
     {
         foreach (var slot in templateSlots)

@@ -8,5 +8,7 @@ using Models;
 public interface ITemplateSlotRepository
 {
     Task<List<TemplateSlot>> GetByDepartmentIdAsync(int departmentId);
+
+    Task<TemplateSlot?> GetByDepartmentIdAndClassNumber(int departmentId, int classNumber);
     Task CreateBulkAsync(int departmentId, List<TemplateSlot> templateSlots);
 }
