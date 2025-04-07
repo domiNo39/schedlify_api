@@ -27,6 +27,31 @@ public class AssignmentController : ControllerBase
         _templateSlotRepository = templateSlotRepository;
         _classRepository = classRepository;
     }
+    [HttpGet("{id}")]
+    public async Task<ActionResult<List<AssignmentResponse>>> GetById(int id)
+    {
+        var assignment = await _repository.GetByIdAsync(id);
+        if (assignment == null)
+        {
+            return NotFound("Assignment not found");
+        }
+        var response = new AssignmentResponse
+        {
+            GroupId = assignment.GroupId,
+            ClassId = assignment.ClassId,
+            Weekday = assignment.Weekday,
+            StartTime = assignment.StartTime,
+            Type = assignment.Type,
+            Lecturer = assignment.Lecturer,
+            Address = assignment.Address,
+            RoomNumber = assignment.RoomNumber,
+            ClassType = assignment.ClassType,
+            Mode = assignment.Mode,
+            Date = assignment.Date,
+            EndTime = assignment.EndTime
+        };
+        return Ok(response);
+    }
 
     [HttpGet("/iseveneweek")]
     public static bool IsEvenWeek(DateOnly date)
