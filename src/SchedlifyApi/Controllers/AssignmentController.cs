@@ -37,6 +37,7 @@ public class AssignmentController : ControllerBase
         }
         var response = new AssignmentResponse
         {
+            Id = assignment.Id,
             GroupId = assignment.GroupId,
             ClassId = assignment.ClassId,
             Weekday = assignment.Weekday,
@@ -81,6 +82,7 @@ public class AssignmentController : ControllerBase
         
         var response = responseAssignments.Select(assignment => new AssignmentResponse
         {
+            Id = assignment.Id,
             GroupId = assignment.GroupId,
             ClassId = assignment.ClassId,
             Weekday = assignment.Weekday,
@@ -127,6 +129,7 @@ public class AssignmentController : ControllerBase
         
         var response = new AssignmentResponse
         {
+            Id = assignment.Id,
             GroupId = assignment.GroupId,
             ClassId = assignment.ClassId,
             Weekday = assignment.Weekday,
@@ -174,6 +177,7 @@ public class AssignmentController : ControllerBase
         
         var response = new AssignmentResponse
         {
+            Id = assignment.Id,
             GroupId = assignment.GroupId,
             ClassId = assignment.ClassId,
             Weekday = assignment.Weekday,
@@ -221,6 +225,7 @@ public class AssignmentController : ControllerBase
         
         var response = new AssignmentResponse
         {
+            Id = assignment.Id,
             GroupId = assignment.GroupId,
             ClassId = assignment.ClassId,
             Weekday = assignment.Weekday,
