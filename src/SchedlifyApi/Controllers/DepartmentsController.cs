@@ -42,6 +42,25 @@ public class DepartmentsController : ControllerBase
 
         return Ok(response);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<ActionResult<DepartmentResponse>> GetDepartmentById(
+        int id
+    )
+    {
+        var department = await _repository.GetById(id);
+        if (department == null)
+        {
+            return NotFound("Department not found");
+        }
+        var response = new DepartmentResponse
+        {
+            Id = department.Id,
+            Name = department.Name,
+            UniversityId = department.UniversityId
+        };
+        return Ok(response);
+    }
 
     [HttpPost]
     public async Task<ActionResult<DepartmentResponse>> CreateDepartment([FromBody] CreateDepartmentRequest request)

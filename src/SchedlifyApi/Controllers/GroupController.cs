@@ -32,7 +32,8 @@ public class GroupsController : ControllerBase
 
     [HttpGet]
     public async Task<ActionResult<List<GroupResponse>>> GetGroups(
-        [FromQuery] int departmentId,
+        [FromQuery] int? departmentId = null,
+        [FromQuery] int? administratorId = null,
         [FromQuery] string? s = null,
         [FromQuery] int offset = 0,
         [FromQuery] int limit = 10
@@ -40,7 +41,7 @@ public class GroupsController : ControllerBase
     {
         // offset and limit does not work
         var departments = await _repository.GetAll(
-            departmentId, s, offset, limit);
+            departmentId, administratorId, s, offset, limit);
         var response = departments.Select(d => new GroupResponse
         {
             Id = d.Id,
@@ -51,8 +52,8 @@ public class GroupsController : ControllerBase
         return Ok(response);
     }
 
-    [HttpGet("/groups/{groupId:int}")]
-    public async Task<ActionResult<GroupResponse>> GetGroupById(int groupId)
+    [HttpGet("{groupId:int}")]
+    public async Task<ActionResult<GroupExtendedResponse>> GetGroupById(int groupId)
     { // offset and limit does not work
         var group = await _repository.GetById(groupId);
         if (group == null)
@@ -60,10 +61,20 @@ public class GroupsController : ControllerBase
             return BadRequest("Group does not exist.");
         }
 
-        var response = new GroupResponse
+        var response = new GroupExtendedResponse()
         {
             Name = group.Name,
-            DepartmentId = group.DepartmentId
+            DepartmentId = group.DepartmentId,
+            Department = new DepartmentResponse
+            {
+                Id = group.DepartmentId,
+                Name = group.Department.Name
+            },
+            University = new UniversityResponse
+            {
+                Id = group.Department.UniversityId,
+                Name = group.Department.University.Name
+            }
         };
         return Ok(response);
     }

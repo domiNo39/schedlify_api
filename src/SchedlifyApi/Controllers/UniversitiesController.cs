@@ -26,7 +26,7 @@ public class UniversitiesController : ControllerBase
         [FromQuery] string? s = null,
         [FromQuery] int offset = 0,
         [FromQuery] int limit = 10
-        )
+    )
     {
         var universities = await _repository.GetAll(s, offset, limit);
         var response = universities.Select(u => new UniversityResponse
@@ -35,6 +35,25 @@ public class UniversitiesController : ControllerBase
             Name = u.Name
         }).ToList();
 
+        return Ok(response);
+    }
+    
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<UniversityResponse>> GetUniversityById(
+        int id
+    )
+    {
+        var university = await _repository.GetById(id);
+        if (university == null)
+        {
+            return NotFound("University not found");
+        }
+        var response = new UniversityResponse
+        {
+            Id = university.Id,
+            Name = university.Name
+        };
         return Ok(response);
     }
 

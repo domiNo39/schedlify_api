@@ -1,3 +1,5 @@
+using SchedlifyApi.Models;
+
 namespace SchedlifyApi.DTO;
 
 public class DepartmentBase

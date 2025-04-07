@@ -45,6 +45,25 @@ public class ClassesController : ControllerBase
         return Ok(response);
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<UniversityResponse>> GetClassById(
+        int id
+    )
+    {
+        var class_ = await _repository.GetByIdAsync(id);
+        if (class_ == null)
+        {
+            return NotFound("Class not found");
+        }
+        var response = new ClassResponse
+        {
+            Id = class_.Id,
+            Name = class_.Name,
+            GroupId = class_.GroupId
+        };
+        return Ok(response);
+    }
+    
     [HttpPost]
     public async Task<ActionResult<ClassResponse>> CreateClass(
         CreateClassRequest createClassRequest)

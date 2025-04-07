@@ -16,7 +16,10 @@ public class GroupRepository : IGroupRepository
 
     public async Task<Group?> GetById(int groupId)
     {
-        return await _context.Groups.FindAsync(groupId);
+        return await _context.Groups
+            .Include(g => g.Department)
+            .Include(g => g.Department.University)
+            .FirstOrDefaultAsync(g => g.Id == groupId);
     }
 
     public async Task<List<Group>> GetAll(int departmentId)
@@ -27,14 +30,21 @@ public class GroupRepository : IGroupRepository
     }
 
     public async Task<List<Group>> GetAll(
-        int departmentId, string? s, int offset=0, int limit=10)
+        int? departmentId, int? administratorId,  string? s, int offset=0, int limit=10)
     {
-        IQueryable<Group> query = _context.Groups.Where(d => d.DepartmentId == departmentId);
+        IQueryable<Group> query = _context.Groups;
+        if (departmentId is not null)
+        {
+            query = query.Where(g => g.DepartmentId == departmentId);
+        }
+        if (administratorId is not null)
+        {
+            query = query.Where(g => g.AdministratorId == administratorId);
+        }
         if (!string.IsNullOrEmpty(s))
         {
             query = query.Where(u => u.Name.Contains(s));
         }
-
         return await query
             .Skip(offset)
             .Take(limit)
