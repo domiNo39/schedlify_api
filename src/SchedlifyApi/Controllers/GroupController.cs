@@ -106,6 +106,7 @@ public class GroupsController : ControllerBase
         var createdGroup = await _repository.Create(group);
         var response = new GroupResponse
         {
+            Id = createdGroup.Id,
             Name = createdGroup.Name,
             DepartmentId = createdGroup.DepartmentId
         };

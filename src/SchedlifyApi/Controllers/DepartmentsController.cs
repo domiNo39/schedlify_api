@@ -80,6 +80,7 @@ public class DepartmentsController : ControllerBase
         var createdDepartment = await _repository.Create(department);
         var response = new DepartmentResponse
         {
+            Id = createdDepartment.Id,
             Name = createdDepartment.Name,
             UniversityId = request.UniversityId //i hope this solution will work
         };
