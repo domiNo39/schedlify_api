@@ -20,6 +20,29 @@ public class AssignmentRepository: IAssignmentRepository
         return await _context.Assignments.FindAsync(id);
     }
 
+    public async Task<List<Assignment>> GetByFilters(int? departmentId, int? universityId)
+    {
+        var query = _context.Assignments
+            .Include(a => a.Group)
+            .ThenInclude(g => g.Department)
+            .ThenInclude(d => d.University)
+            .Include(a => a.Class)
+            .AsQueryable();
+
+        if (departmentId.HasValue)
+        {
+            query = query.Where(a => a.Group.DepartmentId == departmentId.Value);
+        }
+
+        if (universityId.HasValue)
+        {
+            query = query.Where(a => a.Group.Department.UniversityId == universityId.Value);
+        }
+
+        return await query.ToListAsync();
+    }
+
+
     public async Task<List<Assignment>> GetAssignmentsByWeekday(int groupId, Weekday weekday, AssignmentType assignmentType)
     {
         return await _context.Assignments
