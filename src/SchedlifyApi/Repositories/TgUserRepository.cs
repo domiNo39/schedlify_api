@@ -35,6 +35,11 @@ public class TgUserRepository : ITgUserRepository
             .FirstOrDefaultAsync(u => u.Username == username);
     }
 
+    public async Task<List<TgUser>> GetByGroupIdAsync(int groupId)
+    {
+        return await _context.TgUsers.Where(u => u.GroupId == groupId).ToListAsync();
+    }
+
     public async Task<List<TgUser>> GetAllAsync()
     {
         return await _context.TgUsers.ToListAsync();

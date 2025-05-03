@@ -29,12 +29,31 @@ public class AssignmentRepository: IAssignmentRepository
             .OrderBy(a => a.StartTime)
             .ToListAsync();
     }
+    
+    public async Task<List<Assignment>> GetAllAssignmentsByWeekday(Weekday weekday, AssignmentType assignmentType)
+    {
+        return await _context.Assignments
+            .Include(d => d.Class)
+            .Where(a => a.Weekday == weekday)
+            .Where(a => a.Type == assignmentType && a.Date == null)
+            .OrderBy(a => a.StartTime)
+            .ToListAsync();
+    }
 
     public async Task<List<Assignment>> GetAssignmentsByDate(int groupId, DateOnly date)
     {
         return await _context.Assignments
             .Include(d => d.Class)
             .Where(a => a.GroupId == groupId && a.Date == date)
+            .OrderBy(a => a.StartTime)
+            .ToListAsync();
+    }
+    
+    public async Task<List<Assignment>> GetAllAssignmentsByDate(DateOnly date)
+    {
+        return await _context.Assignments
+            .Include(d => d.Class)
+            .Where(a => a.Date == date)
             .OrderBy(a => a.StartTime)
             .ToListAsync();
     }
