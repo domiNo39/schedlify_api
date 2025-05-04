@@ -1,0 +1,95 @@
+# Ignore Rider-specific settings
+.idea/
+*.iml
+
+# Ignore build and output folders
+bin/
+obj/
+
+# User-specific files
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet packages
+packages/
+!packages/repositories.config
+project.lock.json
+global.json
+
+# Rider workspace and solution cache
+.idea/
+*.sln.iml
+.idea_modules/
+.idea/workspace.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries/
+.idea/libraries/
+.idea/tasks.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/
+
+# Resharper and Rider settings
+*.DotSettings.user
+*.ReSharper
+
+# Logs and temp files
+*.log
+*.bak
+*.swp
+*.swn
+*.swo
+*.tmp
+
+# Secrets and environment files
+secrets.json
+.env
+.env.*
+
+# Entity Framework Migrations
+Migrations/
+
+# Docker
+docker-compose.override.yml
+docker-compose.debug.yml
+
+# Ignore compiled DLLs and executables
+*.exe
+*.dll
+*.pdb
+*.mdb
+*.ilk
+*.idb
+
+# Ignore Rider-generated code styles
+.idea/codeStyles/
+
+# Ignore JetBrains cache and indexes
+.idea/indexLayout.xml
+.idea/modules.xml
+.idea/shelf/
+.idea/workspace.xml
+.idea/workspace/
+
+# Ignore debug and runtime artifacts
+*.pidb
+*.ilk
+*.sbr
+*.aps
+*.pch
+
+# Ignore unnecessary dependencies
+node_modules/
+dist/
+
+# Ignore coverage results
+coverage/
+*.coverlet/
+TestResults/
+*.coverage
+*.coveragexml
+*/**/appsettings.json
+*/**/appsettings.Development.json
+.vs/
