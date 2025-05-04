@@ -14,7 +14,7 @@ public class GroupRepository : IGroupRepository
         _context = context;
     }
 
-    public async Task<Group?> GetById(int groupId)
+    public async Task<Group?> GetById(int? groupId)
     {
         return await _context.Groups
             .Include(g => g.Department)

@@ -7,6 +7,8 @@ using SchedlifyApi.Repositories;
 using SchedlifyApi.Controllers;
 using Telegram.Bot.Types.ReplyMarkups;
 using Telegram.Bot;
+using Microsoft.AspNetCore.Http;
+using System.Runtime.Intrinsics.Arm;
 
 
 namespace SchedlifyApi.Services;
@@ -22,14 +24,24 @@ public class TgDailyMessage: BackgroundService
     private IClassRepository _classRepository;
     private ITgUserRepository _tgUserRepository;
     private IGroupRepository _groupRepository;
+    private IDepartmentRepository _departmentRepository;
+    private IUniversityRepository _universityRepository;
     private AssignmentController _assignmentController;
     private ClassesController _classesController;
+    private string scheduleDay_message;
     
     public TgDailyMessage(
         ITelegramBotClient botClient,
         IServiceScopeFactory scopeFactory
         )
     {
+        scheduleDay_message =
+"📅 Дата: {0}\n" +
+"🗓️ День тижня: {1}\n\n" +
+"🔍 Натисни на предмет, щоб побачити детальну інформацію.\n\n" +
+"🎓 Університет: {2}\n" +
+"🏛️ Факультет: {3}\n" +
+"👥 Група: {4}";
         _botClient = botClient;
         _scopeFactory = scopeFactory;
         
@@ -39,14 +51,22 @@ public class TgDailyMessage: BackgroundService
         _classRepository = scope.ServiceProvider.GetRequiredService<IClassRepository>();
         _tgUserRepository = scope.ServiceProvider.GetRequiredService<ITgUserRepository>();
         _groupRepository = scope.ServiceProvider.GetRequiredService<IGroupRepository>();
+        _departmentRepository = scope.ServiceProvider.GetRequiredService<IDepartmentRepository>();
+        _universityRepository = scope.ServiceProvider.GetRequiredService<IUniversityRepository>();
         _assignmentController = new AssignmentController(_assignmentRepository, _templateSlotRepository, _classRepository);
         _classesController = new ClassesController(_classRepository, _groupRepository);
     }
 
 
-    private async Task sendDailyMessage(List<Assignment> assignments, long tgUserId, DateOnly date)
+    private async Task sendDailyMessage(List<Assignment> assignments, TgUser tgUser, DateOnly date)
     {
         int a = date.DayNumber - DateOnly.FromDateTime(DateTime.Now).DayNumber;
+        string dateString = $"{date.Day} {Dicts.Months[date.Month]}";
+        Weekday kyivWeekday = (Weekday)(((int)date.DayOfWeek + 6) % 7);
+        string dayWeek = Dicts.WeekDays[kyivWeekday];
+        Group? group = await _groupRepository.GetById(tgUser.GroupId);
+        Department? department = await _departmentRepository.GetById(group.DepartmentId);
+        University? university = await _universityRepository.GetById(department.UniversityId);
         List<List<InlineKeyboardButton>> buttonList = new List<List<InlineKeyboardButton>>();
         foreach (Assignment assignment in assignments)
         {
@@ -81,10 +101,10 @@ public class TgDailyMessage: BackgroundService
             new InlineKeyboardButton("->", $"show,{a + c}")
         });
 
-        buttonList.Add(new List<InlineKeyboardButton> { new InlineKeyboardButton("Сховати розклад", "hideMessage") });
+        buttonList.Add(new List<InlineKeyboardButton> { new InlineKeyboardButton("🔽Приховати", "hideMessage") });
         try
         {
-            await _botClient.SendMessage(tgUserId, $"Розклад на завтра",
+            await _botClient.SendMessage(tgUser.Id, string.Format(scheduleDay_message, dateString, dayWeek, university.Name, department.Name, group.Name),
                 replyMarkup: new InlineKeyboardMarkup(buttonList));
         } catch {}
     }
@@ -117,7 +137,7 @@ public class TgDailyMessage: BackgroundService
                     {
                         List<Assignment> assignments = await _assignmentController.GetByGroupIdAndDateInner((int)tgUser.GroupId, kyivDate);
                         if (assignments.Count == 0) {continue;}
-                        await sendDailyMessage(assignments, tgUser.Id, kyivDate);
+                        await sendDailyMessage(assignments, tgUser, kyivDate);
                     }
                 }
             }
