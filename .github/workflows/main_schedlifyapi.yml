@@ -71,11 +71,3 @@ jobs:
           slot-name: 'Production'
           package: .
 
-      - name: Apply EF Core Migrations
-        run: |
-          cd src/SchedlifyApi
-          dotnet ef database update --configuration Release --no-build
-        env:
-          ASPNETCORE_ENVIRONMENT: Production
-          ConnectionStrings__DefaultConnection: ${{ secrets.AZURE_CONNECTION_STRING }}
-
