@@ -36,7 +36,8 @@ builder.Services.AddScoped<ITemplateSlotRepository, TemplateSlotRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IClassRepository, ClassRepository>();
 builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
-builder.Services.AddHostedService<TelegramMessagesService>();
+// builder.Services.AddHostedService<TgNotificationMessage>();
+builder.Services.AddHostedService<TgDailyMessage>();
 
 var app = builder.Build();
 

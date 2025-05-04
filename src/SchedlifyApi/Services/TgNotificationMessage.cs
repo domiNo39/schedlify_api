@@ -9,12 +9,12 @@ using Telegram.Bot;
 namespace SchedlifyApi.Services;
 
 
-public class TelegramMessagesService: BackgroundService
+public class TgNotificationMessage: BackgroundService
 {
     private int minutesBeforeClassStarts = 15;
     ITelegramBotClient _botClient;
     private readonly IServiceScopeFactory _scopeFactory;
-    public TelegramMessagesService(
+    public TgNotificationMessage(
         ITelegramBotClient botClient,
         IServiceScopeFactory scopeFactory
         )
@@ -61,12 +61,18 @@ public class TelegramMessagesService: BackgroundService
                     foreach (TgUser tgUser in tgUsers)
                     {
                         string messageText = $"Заняття {assignment.Class.Name} розпочинається через {minutesBeforeClassStarts} хв";
-                        try
+                        if (tgUser.Subscribed)
                         {
-                            await _botClient.SendMessage(
-                                tgUser.Id, messageText
-                            );
-                        } catch {}
+                            try
+                            {
+                                await _botClient.SendMessage(
+                                    tgUser.Id, messageText
+                                );
+                            }
+                            catch
+                            {
+                            }
+                        }
                     }
                 }
             }

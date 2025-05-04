@@ -45,13 +45,21 @@ public class ClassesController : ControllerBase
         return Ok(response);
     }
 
+    [ApiExplorerSettings(IgnoreApi = true)] // костиль єбаний
+    public async Task<Class> GetClassByIdInner(int id)
+    {
+        var class_ = await _repository.GetByIdAsync(id);
+
+        return class_;
+    }
+    
     [HttpGet("{id}")]
     public async Task<ActionResult<UniversityResponse>> GetClassById(
         int id
     )
     {
-        var class_ = await _repository.GetByIdAsync(id);
-        if (class_ == null)
+        Class class_ = await GetClassByIdInner(id);
+        if (class_ is null)
         {
             return NotFound("Class not found");
         }

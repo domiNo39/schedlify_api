@@ -60,9 +60,9 @@ public class AssignmentController : ControllerBase
         int weekOfYear = (date.DayOfYear - 1) / 7 + 1;
         return weekOfYear % 2 == 0;
     }
-    
-    [HttpGet("by_group_id_and_date")]
-    public async Task<ActionResult<List<AssignmentResponse>>> GetByGroupIdAndDate(int groupId, DateOnly date)
+
+    [ApiExplorerSettings(IgnoreApi = true)] // костиль єбаний
+    public async Task<List<Assignment>> GetByGroupIdAndDateInner(int groupId, DateOnly date)
     {
         int dayOfWeek = (int)date.DayOfWeek; 
         List<Assignment> regularAssignments = await _repository.GetAssignmentsByWeekday(groupId, (Weekday)((dayOfWeek + 6) % 7), AssignmentType.Regular);
@@ -79,7 +79,14 @@ public class AssignmentController : ControllerBase
         regularAssignments.RemoveAll(assignment =>specialAssignments.Any(p => p.StartTime == assignment.StartTime));
         List<Assignment> responseAssignments = regularAssignments.Concat(specialAssignments).Concat(intervalAssignments).OrderBy(p => p.StartTime)
             .ToList();
-        
+        return responseAssignments;
+
+    }
+    
+    [HttpGet("by_group_id_and_date")]
+    public async Task<ActionResult<List<AssignmentResponse>>> GetByGroupIdAndDate(int groupId, DateOnly date)
+    {
+        List<Assignment> responseAssignments = await GetByGroupIdAndDateInner(groupId, date);
         var response = responseAssignments.Select(assignment => new AssignmentResponse
         {
             Id = assignment.Id,
