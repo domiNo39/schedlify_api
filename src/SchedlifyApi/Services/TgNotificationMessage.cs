@@ -36,7 +36,7 @@ public class TgNotificationMessage: BackgroundService
         var tgUserRepo = scope.ServiceProvider.GetRequiredService<ITgUserRepository>();
         while (!stoppingToken.IsCancellationRequested)
         {
-            TimeZoneInfo kyivTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Kyiv");
+            TimeZoneInfo kyivTimeZone = TimeZoneInfo.FindSystemTimeZoneById("FLE Standard Time");
             DateTime kyivTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, kyivTimeZone);
             TimeOnly kyivTimeOnly = TimeOnly.FromDateTime(kyivTime);
             DateOnly kyivDate = DateOnly.FromDateTime(kyivTime);

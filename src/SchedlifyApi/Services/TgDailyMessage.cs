@@ -111,7 +111,7 @@ public class TgDailyMessage: BackgroundService
 
     private DateTime GetLocalNow()
     {
-        TimeZoneInfo kyivTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Kyiv");
+        TimeZoneInfo kyivTimeZone = TimeZoneInfo.FindSystemTimeZoneById("FLE Standard Time");
         DateTime kyivDateTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, kyivTimeZone);
         return kyivDateTime;
     }
