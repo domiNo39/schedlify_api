@@ -57,4 +57,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+var customUrl = builder.Configuration.GetValue<string>("Application:Url");
+app.Run(customUrl);
