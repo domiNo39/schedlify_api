@@ -4,44 +4,44 @@ public class Dicts
 {
     public static readonly Dictionary<Mode, string> Modes = new Dictionary<Mode, string>()
     {
-        {Mode.Online, "Дистанційно"},
-        {Mode.Offline, "Очно" }
+        {Mode.Online, "Р”РёСЃС‚Р°РЅС†С–Р№РЅРѕ"},
+        {Mode.Offline, "РћС‡РЅРѕ" }
     };
     public static readonly Dictionary<Weekday, string> WeekDays = new Dictionary<Weekday, string>()
     {
-        {Weekday.Monday, "Понеділок" },
-        {Weekday.Tuesday, "Вівторок" },
-        {Weekday.Wednesday,"Середа" },
-        {Weekday.Thursday, "Четвер" },
-        {Weekday.Friday, "П'ятниця" },
-        {Weekday.Saturday, "Субота" },
-        {Weekday.Sunday, "Неділя" }
+        {Weekday.Monday, "РџРѕРЅРµРґС–Р»РѕРє" },
+        {Weekday.Tuesday, "Р’С–РІС‚РѕСЂРѕРє" },
+        {Weekday.Wednesday,"РЎРµСЂРµРґР°" },
+        {Weekday.Thursday, "Р§РµС‚РІРµСЂ" },
+        {Weekday.Friday, "Рџ'СЏС‚РЅРёС†СЏ" },
+        {Weekday.Saturday, "РЎСѓР±РѕС‚Р°" },
+        {Weekday.Sunday, "РќРµРґС–Р»СЏ" }
     };
     public static readonly Dictionary<ClassType, string> ClassTypes = new Dictionary<ClassType, string>()
     {
-        {ClassType.Lecture, "Лекція" },
-        {ClassType.Seminar, "Практична" }
+        {ClassType.Lecture, "Р›РµРєС†С–СЏ" },
+        {ClassType.Seminar, "РџСЂР°РєС‚РёС‡РЅР°" }
     };
     public static readonly Dictionary<AssignmentType, string> AssignmentTypes = new Dictionary<AssignmentType, string>()
     {
-        {AssignmentType.Special, "Одноразова"},
-        {AssignmentType.Regular, "Регулярна"},
-        {AssignmentType.Odd, "Періодична"},
-        {AssignmentType.Even, "Періодична"}
+        {AssignmentType.Special, "РћРґРЅРѕСЂР°Р·РѕРІР°"},
+        {AssignmentType.Regular, "Р РµРіСѓР»СЏСЂРЅР°"},
+        {AssignmentType.Odd, "РџРµСЂС–РѕРґРёС‡РЅР°"},
+        {AssignmentType.Even, "РџРµСЂС–РѕРґРёС‡РЅР°"}
     };
     public static readonly Dictionary<int, string> Months = new Dictionary<int, string>()
     {
-        {1, "січня"},
-        {2, "лютого"},
-        {3, "березня"},
-        {4, "квітня"},
-        {5, "травня"},
-        {6, "червня"},
-        {7, "липня"},
-        {8, "серпня"},
-        {9, "вересня"},
-        {10, "жовтня"},
-        {11, "листопада"},
-        {12, "грудня"}
+        {1, "СЃС–С‡РЅСЏ"},
+        {2, "Р»СЋС‚РѕРіРѕ"},
+        {3, "Р±РµСЂРµР·РЅСЏ"},
+        {4, "РєРІС–С‚РЅСЏ"},
+        {5, "С‚СЂР°РІРЅСЏ"},
+        {6, "С‡РµСЂРІРЅСЏ"},
+        {7, "Р»РёРїРЅСЏ"},
+        {8, "СЃРµСЂРїРЅСЏ"},
+        {9, "РІРµСЂРµСЃРЅСЏ"},
+        {10, "Р¶РѕРІС‚РЅСЏ"},
+        {11, "Р»РёСЃС‚РѕРїР°РґР°"},
+        {12, "РіСЂСѓРґРЅСЏ"}
     };
 }
