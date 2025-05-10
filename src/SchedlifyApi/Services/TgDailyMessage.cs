@@ -136,7 +136,6 @@ public class TgDailyMessage: BackgroundService
                     if (tgUser.GroupId is not null && tgUser.Subscribed)
                     {
                         List<Assignment> assignments = await _assignmentController.GetByGroupIdAndDateInner((int)tgUser.GroupId, kyivDate);
-                        if (assignments.Count == 0) {continue;}
                         await sendDailyMessage(assignments, tgUser, kyivDate);
                     }
                 }
