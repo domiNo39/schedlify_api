@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedlifyApi", "src\SchedlifyApi\SchedlifyApi.csproj", "{0B5FA176-92DD-4D64-B82A-BAE27C82F605}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{36D1E3C9-499A-470F-B776-D020D3E6B08E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{0B5FA176-92DD-4D64-B82A-BAE27C82F605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B5FA176-92DD-4D64-B82A-BAE27C82F605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B5FA176-92DD-4D64-B82A-BAE27C82F605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D1E3C9-499A-470F-B776-D020D3E6B08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D1E3C9-499A-470F-B776-D020D3E6B08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D1E3C9-499A-470F-B776-D020D3E6B08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D1E3C9-499A-470F-B776-D020D3E6B08E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
