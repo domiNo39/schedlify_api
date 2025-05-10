@@ -121,7 +121,7 @@ public class TgDailyMessage: BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            DateTime kyivDateTime = GetLocalNow() + TimeSpan.FromHours(24);
+            DateTime kyivDateTime = GetLocalNow() + TimeSpan.FromHours(48);
             TimeOnly kyivTimeOnly = TimeOnly.FromDateTime(kyivDateTime);
             DateOnly kyivDate = DateOnly.FromDateTime(kyivDateTime);
             Weekday kyivWeekday = (Weekday)(((int)kyivDateTime.DayOfWeek + 6) % 7);
