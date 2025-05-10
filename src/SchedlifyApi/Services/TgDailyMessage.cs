@@ -128,8 +128,8 @@ public class TgDailyMessage: BackgroundService
             
             Console.WriteLine(kyivTimeOnly.Hour);
             Console.WriteLine(kyivTimeOnly.Minute);
-            if (kyivTimeOnly.Hour == dailyPushHour && kyivTimeOnly.Minute == dailyPushMinute)
-            {
+            //if (kyivTimeOnly.Hour == dailyPushHour && kyivTimeOnly.Minute == dailyPushMinute)
+            //{
                 List<TgUser> tgUsers = await _tgUserRepository.GetAllAsync();
                 foreach (TgUser tgUser in tgUsers)
                 {
@@ -140,7 +140,7 @@ public class TgDailyMessage: BackgroundService
                         await sendDailyMessage(assignments, tgUser, kyivDate);
                     }
                 }
-            }
+            //}
 
             await Task.Delay(TimeSpan.FromSeconds(60), stoppingToken);
         }
