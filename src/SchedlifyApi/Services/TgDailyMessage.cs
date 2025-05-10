@@ -106,7 +106,11 @@ public class TgDailyMessage: BackgroundService
         {
             await _botClient.SendMessage(tgUser.Id, string.Format(scheduleDay_message, dateString, dayWeek, university.Name, department.Name, group.Name),
                 replyMarkup: new InlineKeyboardMarkup(buttonList));
-        } catch {}
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error sending message: {ex.Message}");
+        }
     }
 
     private DateTime GetLocalNow()
